@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Sala ADS P1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>🏰 Guilda ADS P1</h2>
+
+<div id="lista"></div>
+
+<button onclick="enviarAvaliacoes()">Enviar Avaliação</button>
+<button onclick="logout()">Sair</button>
+
+<script src="script.js"></script>
+
+<script>
+let usuario = JSON.parse(localStorage.getItem("usuarioLogado"));
+
+if(!usuario){
+    window.location.href="login.html";
+}
+
+let salaAtual = "ads_p1";
+let salaUsuario = usuario.curso + "_p" + usuario.periodo;
+
+if(salaAtual !== salaUsuario){
+    alert("Acesso negado!");
+    window.location.href="login.html";
+}
+
+function logout(){
+    localStorage.removeItem("usuarioLogado");
+    window.location.href="login.html";
+}
+</script>
+
+</body>
+</html>
