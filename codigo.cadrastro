@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="input-box">
+        <form onsubmit="return validarCadastro()" >
+            <h2>Cadastro</h2>
+
+            <div class="input-box">
+            <input id="nome" placeholder="Nome Completo" type="text" required>
+            <i class="bx bxs-user"></i>
+      
+        </div>
+        <div class="input-box">
+            <input id="matricula" placeholder="Matrícula" type="text" required>
+            <i class="bx bxs-id-card"></i>
+        </div>
+
+        <div class="input-box">
+            <label>Curso:</label>
+            <select id="curso" required>
+        <option value="">Selecione um curso</option>
+        <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+        <option value="si">Sistemas de Informação</option>
+        <option value="eng_soft">Engenharia de Software</option>
+        <option value="cc">Ciência da Computação</option>
+</select>
+       <i class="bx bxs-graduation"></i>
+
+        </div>
+
+        <div class="input-box">
+            <label>Periodo:</label>
+            <select id="periodo" required>
+        <option value="">Selecione o periodo</option>
+        <option value="1">P1</option>
+        <option value="2">P2</option>
+        <option value="3">P3</option>
+        <option value="4">P4</option>
+        <option value="5">P5</option>
+</select>
+         <i class="bx bxs-graduation"></i>
+        </div>
+
+        <div class="input-box">
+            <input id="email" placeholder="Email" type="email" required>
+            <i class="bx bxs-envelope"></i>
+
+        </div>
+
+        <div class="input-box">
+            <input id="senha" placeholder="Senha" type="password">
+            <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <button type="submit">Cadastrar-se</button>
+        
+        <div class="registrer-link">
+            <p>Fazer login <a href='login.html'>Entrar</a></p>
+        </div>
+        </form>
+
+<script src="script.js"></script>
+    </main>
+</body>
+</html>
